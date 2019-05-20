@@ -11,12 +11,7 @@
 |
 */
 
-Route::group([ 'middleware' =>['session', 'errors']], function(){
-	Route::get('/', 'Auth\AuthController@getLogin');
-	Route::get('login', 'Auth\AuthController@getLogin');
-	Route::post('login', 'Auth\AuthController@postLogin');
-	Route::get('logout', 'Auth\AuthController@getLogout');
-});
+
 Route::get('/', function () {
     return view('welcome');
 });
